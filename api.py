@@ -2,7 +2,6 @@ import os
 import openai
 openai.organization = "org-5wXvXlEHbG9wwVDoY36t8hvf"
 openai.api_key = os.getenv("OPENAI_API_KEY")
-PROMPT = "תורה"
 MODEL = "curie:ft-personal:kookmodel-2022-09-14-15-46-30"
 
 
