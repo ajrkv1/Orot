@@ -8,7 +8,7 @@ app = Flask(__name__)
 def hello():
     p = request.args.get("p")
     if p == None or p =="":
-        res = "בבקשה הכנס בסיס!"
+        res = "אין מה לראות כאן. עדיין!"
         p = "הכנס בסיס"
     else:
         try:

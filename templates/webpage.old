@@ -7,77 +7,43 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
-
-	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <title>Rabbi Kook Generator</title>
     <style>
         body {
             padding-top: 50px;
-			background-color:azure;
         }  
         .block {
-            max-width: 500px;
-			border-radius: 5px;
-			border-style: solid ;
-			background-color: white;
-			border-width: 2px;
+            max-width: 500px;  
         }
-		.textbox{
-			max-width: 100%;
-			border-radius: 10px;
-			border-width: 2px;
-		}
-		.text{
-			font-family: Calibri;
-			text-align: center;
-		}
-		.gen-btn{
+		.textbox {
 			width: 100%;
-			border-radius: 10px;
 		}
-		.pad{
-			padding-top: 2px;
-			padding-bottom: 2px;
-		}
-		.textarea{
-			border-radius: 10px;
-			font-size:large;
-			text-align: right;
-		}
-
         
     </style>
   </head>
   <body>
     
     <div class="container block">
-        <h1 align="center" class="text" style="font-size: 72">מחולל קטעי הרב קוק<h1>
-        <form action="/" method="get">
+        <h1 align="center">מחולל קטעי הרב קוק<h1>
+        <form action="/hello" method="get">
             <div class="form-group">
-				<div class="container">
-					<div class="row pad">
+				<div class="container block">
+					<div class="row">
 						<div class="col-3">
-                			<label class="text" for="Rabbi Input">בסיס:</label>
+                			<label class="texbox" for="Rabbi Input">בסיס:</label>
 						</div>
 						<div class="col-9">
-                			<input type="text" name="p" class="form-control-sr textbox text" id="p" placeholder="{{p}}">
+                			<input type="text" name="p" class="form-control-sr textbox" id="p" placeholder="{{p}}">
 				
-						</div>
-					</div>
-					<div class="row pad">
-						<div class="col-12">
-							<button type="submit" class="gen-btn btn-primary text">חולל!</button>
-						</div>
-					</div>
-					<div class="row pad">
-						<div class="form-group">
-							<textarea class="form-control text textarea" readonly rows = 10>{{res}}</textarea>
 						</div>
 					</div>
 				</div>
 			</div>
-            
-            
+            <button type="submit" class="btn-primary textbox">חולל!</button>
+            <div class="form-group">
+                <textarea class="form-control" readonly rows = 10>{{res}}</textarea>
+            </div>
             
         </form>
     </div>
