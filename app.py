@@ -16,6 +16,3 @@ def hello():
         except:
             res = "קרתה בעיה. נסה שוב בבקשה"
     return render_template("webpage.html",res=res,p=p)
-
-if __name__ == "__main__":
-    app.run(host = "0.0.0.0", debug = True)
